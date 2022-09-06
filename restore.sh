@@ -1,7 +1,7 @@
 #!/bin/bash
 
 print_help () {
-    echo "Usage: ./restore.sh -d /root/.near/data/ -b /root/chall14/backups/ -s neard.service
+    echo "Usage: ./restore.sh -d /root/.near/data/ -b /root/chall14/backups/near_2022-09-06-14-05/data.tar.gz -s neard.service
  -d  --data <dir> data directory where to restore
  -b  --backup <file> backup archive
  -s  --service <name> service name file"
