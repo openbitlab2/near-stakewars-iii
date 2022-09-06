@@ -83,6 +83,8 @@ if [ -d "$backupdir" ]; then
 
     cd "${backupdir}near_${DATE}"
     tar -czf data.tar.gz -C $datadir .
+    
+    curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/8226f1e8-3472-4982-b7d5-b1705035d9e9
 
     echo "Backup completed" | ts
 else
