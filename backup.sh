@@ -17,7 +17,6 @@ case $1 in
             print_help
             exit 1
         else
-	    DATE=$(date +%Y-%m-%d-%H-%M)
             backupdir="$2"
         fi
         shift # past argument
@@ -84,10 +83,6 @@ if [ -d "$backupdir" ]; then
 
     cd "${backupdir}near_${DATE}"
     tar -czf data.tar.gz -C $datadir .
-
-    # Submit backup completion status, you can use healthchecks.io, betteruptime.com or other services
-    # Example
-    # curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/xXXXxXXx-XxXx-XXXX-XXXx-...
 
     echo "Backup completed" | ts
 else
